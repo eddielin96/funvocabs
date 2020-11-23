@@ -4,8 +4,8 @@ include_once('header.php');
 
 <body>
 <div class="container col-10">
-<div class="d-flex justify-content-center align-items-center" style="height:90vh">
-    
+<div class="d-flex flex-column justify-content-center align-items-center" style="height:90vh">
+    <div class="text-3d" >FunVocabs</div>
     <form action="check.php" method="post">
     <h5 class="text-center text-white" >Sign in</h5>
         <div class="my-3">
