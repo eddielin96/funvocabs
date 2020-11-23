@@ -30,5 +30,8 @@
         border:none;
     }
 */
+    .register_container > div >form{
+        background:white;
+    }
     </style>
 </head>

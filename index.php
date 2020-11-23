@@ -10,15 +10,15 @@ include_once('header.php');
     <h5 class="text-center text-white" >Sign in</h5>
         <div class="my-3">
             <p><input type="text" name="acc" required placeholder="Username" style="width:100%" minlength="6" maxlength="10"></p>
-            <p  class="my-3"></p>
+            <p  class="mb-4"></p>
         </div>
         <div class="my-3">
             <p><input type="password" name="pw" required placeholder="Password " style="width:100%" minlength="6" maxlength="12"></p>
-            <p class="my-3"></p>
+            <p class="mb-4"></p>
         </div>
         <div>
             <a href="forget_pw.php">Forget password?</a>
-            <a href="regiser.php">Create an account</a>
+            <a href="register.php">Create an account</a>
         </div>
         <div class="mt-3">
             <input class="font-weight-normal" type="submit" value="SIGN IN" style="width:100%; border:none; background:#e1e1ea">
