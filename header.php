@@ -51,17 +51,20 @@
     .text-3d::before{
        content:"FunVocabs";
        position:absolute;
-       left:0;
+       font-size:65px;
+       left:0px;
        top:0;
        transform: skewX(30deg);
        z-index:-1;
        transform-origin:bottom left;
-       color:transparent;
+       opacity:0.2;
        text-shadow:
        15px 0px 20px rgba(0, 0, 102,0.25),
        15px 0px 25px rgba(0, 0, 102,0.2),
        15px 0px 35px rgba(0, 0, 102,1.5),
        15px 0px 45px rgba(0, 0, 102,1);
+
+       color:#000;
     } 
 /*
     form > div > p > input:invalid{
@@ -95,6 +98,6 @@
 
         }
 }
-    }
+    
     </style>
 </head>
