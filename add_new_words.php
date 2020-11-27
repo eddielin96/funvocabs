@@ -3,7 +3,7 @@
 <form action="api/insert_new_words.php" method="post">
 <div class="col-12 d-flex flex-wrap">
 
-    <div class="col-12 col-md-4 d-flex flex-column flex-start">
+    <div class="col-12 col-md-4 d-flex flex-column pr-5">
 
         <div class="my-3 my-md-auto font-weight-bold">Vocab：<input type="text" name="vocab" placeholder="enter your vocab here"></div>
         <div class="my-3 my-md-auto font-weight-bold">Type：
@@ -20,6 +20,11 @@
 
     <div class="bg-primary pb-3 col-md-8 col-12 font-weight-bold">
         <div>Note：<textarea style="width:100%; height:400px;" name="note" placeholder="enter your text here"></textarea></div>
+    </div>
+
+    <div class=" d-flex col-12 my-3 my-md-5 justify-content-center">
+        <input class="mx-2" style="width:100px" type="submit" value="submit">
+        <input class="mx-2" style="width:100px" type="reset" value="reset">
     </div>
 
 </div>
