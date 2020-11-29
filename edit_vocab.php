@@ -24,6 +24,10 @@ include_once('header.php');
         }else{
             include "vocabs_list.php";
         }
+
+        if(isset($_GET['id'])){
+
+        }
     
     ?>
     

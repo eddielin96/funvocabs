@@ -76,8 +76,9 @@ values
 
 $pdo->exec($sql);
 
-echo "<br>";
-echo $sql;
+// echo "<br>";
+// echo $sql;
+header("location:../main.php")
 
 
 ?>
