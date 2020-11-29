@@ -3,7 +3,7 @@ include_once('header.php');
 ?>
 
 <body>
-<div class="d-flex justify-content-center mt-5 mb-2"><div class="text-3d" >FunVocabs</div></div>
+<div class="d-flex justify-content-center mt-5 mb-2"><a href="main.php"><div class="text-3d" >FunVocabs</div></a></div>
 
 <div class="container col-12 ">
 
