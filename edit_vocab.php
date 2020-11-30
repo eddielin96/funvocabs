@@ -9,13 +9,13 @@ include_once('header.php');
         // }else{
         //     include "vocabs_list.php";
         // }
-
-    
+      
         if(isset($_GET['id'])){
             include_once "base.php";
             $sql = "SELECT `voc`,`type`,`meaning`,`sentence`,`note` FROM `vocabs` WHERE id='{$_GET['id']}'";
             $info = $pdo->query($sql)->fetch();
             // print_r($info);
+            $id="{$_GET['id']}";
         }
     
     ?>
@@ -38,9 +38,10 @@ include_once('header.php');
         <div class="my-3 my-md-auto font-weight-bold">Type：
             <select name="type"> 
 <!-- 不知道怎麼讓傳值回來的 info['type'] -->
-                <option value="1" >vocab</option>
-                <option value="2" >>phrase</option>
-                <option value="3" >>idiom</option>
+
+                <option value="1"  <?php if ($info['type']==1){echo "selected";}?>>vocab</option>
+                <option value="2"  <?php if ($info['type']==2){echo "selected";}?>>phrase</option>
+                <option value="3"  <?php if ($info['type']==3){echo "selected";}?>>idiom</option>
             </select>
         </div>
 
@@ -55,7 +56,9 @@ include_once('header.php');
     <div class=" d-flex col-12 my-3 my-md-5 justify-content-center">
         <input class="mx-2" style="width:100px" type="submit" value="submit">
         <input class="mx-2" style="width:100px" type="reset" value="reset">
+        <div><input class="d-none" name='id' value="<?=$id?>"></div>
     </div>
+   
 </div>
 </form>
 

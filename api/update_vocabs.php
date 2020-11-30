@@ -9,8 +9,14 @@ $type=$_POST['type'];
 $meaning=$_POST['meaning'];
 $sentence=$_POST['sentence'];
 $note=$_POST['note'];
+$id=$_POST['id'];
 
-echo $sentence;
+echo $voc."<br>";
+echo $type."<br>";
+echo $meaning."<br>";
+echo $sentence."<br>";
+echo $note;
+echo $id;
 
 echo "<hr>";
 
@@ -21,25 +27,24 @@ echo "<hr>";
 if (strpos("$voc","'")){
     $a = explode("'",$voc);
     $voc= implode("\'",$a);
-    // echo "已加入\在'符號前";
- }else{
+    echo "已加入\在'符號前";
+}else{
      //if 輸入字串原本就沒有任何'符號 do nothing
- }
+}
 
  //避免意思出現' 影響sql 語句輸入
 if (strpos("$meaning","'")){
     $a = explode("'",$meaning);
     $meaning= implode("\'",$a);
-    // echo "已加入\在'符號前";
- }else{
+    echo "已加入\在'符號前";
+}else{
      //if 輸入字串原本就沒有任何'符號 do nothing
- }
+}
 
 //避免句子出現' 影響sql 語句輸入
 if (strpos("$sentence","'")){
-   $a = explode("'",$sentence);
-   $sentence= implode("\'",$a);
-   // echo "已加入\在'符號前";
+    $a = explode("'",$sentence);
+    $sentence= implode("\'",$a);
 }else{
     //if 輸入字串原本就沒有任何'符號 do nothing
 }
@@ -48,10 +53,10 @@ if (strpos("$sentence","'")){
 if (strpos("$note","'")){
     $a = explode("'",$note);
     $note= implode("\'",$a);
-    // echo "已加入\在'符號前";
- }else{
+    echo "已加入\在'符號前";
+}else{
      //if 輸入字串原本就沒有任何'符號 do nothing
- }
+}
 
  // $a 為使用一次的變數，所以重複使用沒有關係
 
@@ -67,19 +72,17 @@ if (strpos("$note","'")){
 // echo $note;
 // echo "<br>";
 
-$sql="insert into 
-vocabs
-(`voc`,`type`,`meaning`,`sentence`,`note`)
-values
-('$voc','$type','$meaning','$sentence','$note')";
-
-
-
-$pdo->exec($sql);
+$sql="UPDATE vocabs SET `voc`='$voc', `type`='$type',`meaning`='$meaning', `sentence`='$sentence', `note`='$note' WHERE `id`='$id'" ;
 
 // echo "<br>";
-// echo $sql;
-header("location:../main.php")
+
+$pdo->exec($sql);
+header("location:../main.php");
 
 
-?>
+// $pdo->exec($sql);
+
+// // echo "<br>";
+// // echo $sql;
+// header("location:../main.php")
+
