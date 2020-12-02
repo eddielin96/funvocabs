@@ -37,8 +37,6 @@ include_once('header.php');
         <div class="my-3 my-md-auto font-weight-bold">Vocab：<input disabled type="text" name="vocab" placeholder="edit your vocab" value="<?=$info['voc'];?>"></div>
         <div class="my-3 my-md-auto font-weight-bold">Type：
             <select name="type"  disabled> 
-<!-- 不知道怎麼讓傳值回來的 info['type'] -->
-
                 <option value="1"  <?php if ($info['type']==1){echo "selected";}?>>vocab</option>
                 <option value="2"  <?php if ($info['type']==2){echo "selected";}?>>phrase</option>
                 <option value="3"  <?php if ($info['type']==3){echo "selected";}?>>idiom</option>

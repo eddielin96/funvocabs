@@ -2,14 +2,16 @@
 include_once "base.php";
 
 // 顯示新增的單字列表 按照時間排列 
+$a = "{$_GET['type']}";
 ?>
 <form action="main.php" method="get">
-    <select name="type">
-        <option value="A~Z">A-Z</option>
-        <option value="type">type</option>
-        <option value="Create time">Create Time</option>
+<select name="type">
+        <option value="A~Z" <?php if ($a=="A~Z"){echo "selected";}?>>A-Z</option>
+        <option value="type" <?php if ($a=="type"){echo "selected";}?>>type</option>
+        <option value="Create time" <?php if ($a=="Create time"){echo "selected";}?>>Create Time</option>
     </select>
     <input type="submit" value="send">
+    <span style="color:#5f320c; font-family:arial; font-weight:bold;">(*Choose order by)</span>
 </form>
 
 
