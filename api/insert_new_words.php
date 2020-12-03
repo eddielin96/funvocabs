@@ -79,7 +79,7 @@ $pdo->exec($sql);
 
 // echo "<br>";
 // echo $sql;
-header("location:../main.php")
+header("location:../main.php?content=vocabs_list")
 
 
 ?>

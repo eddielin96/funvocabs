@@ -1,14 +1,18 @@
 <?php
 include_once "base.php";
-
 // 顯示新增的單字列表 按照時間排列 
-$a = "{$_GET['type']}";
+if (isset($_GET['type'])){
+    $a = "{$_GET['type']}";
+}else{
+    $a ="A~Z";
+}
+
 ?>
 <form action="main.php" method="get">
 <select name="type">
-        <option value="A~Z" <?php if ($a=="A~Z"){echo "selected";}?>>A-Z</option>
-        <option value="type" <?php if ($a=="type"){echo "selected";}?>>type</option>
-        <option value="Create time" <?php if ($a=="Create time"){echo "selected";}?>>Create Time</option>
+        <option value="A~Z" <?php if($a=="A~Z"){echo "selected";}?>> A-Z</option>
+        <option value="type" <?php if($a=="type"){echo "selected";}?>> type</option>
+        <option value="Create time" <?php if($a=="Create time"){echo "selected";}?>> Create Time</option>
     </select>
     <input type="submit" value="send">
     <span style="color:#5f320c; font-family:arial; font-weight:bold;">(*Choose order by)</span>
@@ -17,7 +21,10 @@ $a = "{$_GET['type']}";
 
 
 <?php
+
 if (isset($_GET["type"])){ // 如果有收到該變數的話呢就按照該以下方式排列
+
+
 
     switch($_GET["type"]){
         case "A~Z":

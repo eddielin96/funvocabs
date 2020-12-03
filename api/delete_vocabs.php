@@ -9,5 +9,5 @@ $sql = "DELETE FROM `vocabs` WHERE `id`='$value'";
 
 $pdo->exec($sql);
 
-header("location:../main.php");
+header("location:../main.php?content=vocabs_list");
 ?>

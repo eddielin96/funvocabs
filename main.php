@@ -8,9 +8,9 @@ include_once('header.php');
 <div class="container col-12 ">
 
     <ul class="mb-3 p-0 d-inline-block d-flex flex-row col-12 justify-content-center">
+        <li class="tabstyle col-3 "><a href="?content=search">Search</a></li>
         <li class="tabstyle col-3 "><a href="?content=vocabs_list">Vocabs List</a></li>
         <li class="tabstyle col-3 "><a href="?content=add_new_words">Add new words</a></li>
-        <li class="tabstyle col-3 "><a href="?content=search">Search</a></li>
         <li class="tabstyle col-3 "><a href="?content=quiz">Quiz</a></li>
     </ul>
 
@@ -22,7 +22,7 @@ include_once('header.php');
             include $page;
         
         }else{
-            include "vocabs_list.php";
+            include "search.php";
         }
     
     ?>

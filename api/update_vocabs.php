@@ -77,7 +77,7 @@ $sql="UPDATE vocabs SET `voc`='$voc', `type`='$type',`meaning`='$meaning', `sent
 // echo "<br>";
 
 $pdo->exec($sql);
-header("location:../main.php");
+header("location:../main.php?content=vocabs_list");
 
 
 // $pdo->exec($sql);
