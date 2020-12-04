@@ -8,13 +8,16 @@ if (isset($_GET['type'])){
 }
 
 ?>
-<form action="main.php" method="get">
+<form action="index.php" method="get">
 <select name="type">
         <option value="A~Z" <?php if($a=="A~Z"){echo "selected";}?>> A-Z</option>
         <option value="type" <?php if($a=="type"){echo "selected";}?>> type</option>
         <option value="Create time" <?php if($a=="Create time"){echo "selected";}?>> Create Time</option>
     </select>
+    <input class="d-none" name="content" value="vocabs_list"> 
+    <!-- 隱藏傳值 一樣讓頁面帶回增加單字頁面 附加content = vocabs_list 所以可以讓index include 該頁面 -->
     <input type="submit" value="send">
+    
     <span style="color:#5f320c; font-family:arial; font-weight:bold;">(*Choose order by)</span>
 </form>
 

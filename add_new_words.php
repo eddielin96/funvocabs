@@ -8,9 +8,9 @@
         <div class="my-3 my-md-auto font-weight-bold">Vocab：<input type="text" name="vocab" placeholder="enter your vocab here"></div>
         <div class="my-3 my-md-auto font-weight-bold">Type：
             <select name="type">
-                <option value="1">vocab</option>
-                <option value="2">phrase</option>
-                <option value="3">idiom</option>
+                <option value="voc">vocab</option>
+                <option value="phrase">phrase</option>
+                <option value="idiom">idiom</option>
             </select>
         </div>
 

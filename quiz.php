@@ -29,7 +29,7 @@ $result="";
 
 
 <div>
-<form action="main.php?content=quiz&voc=<?=$voc?>&meaning=<?=$meaning?>" method="post">
+<form action="index.php?content=quiz&voc=<?=$voc?>&meaning=<?=$meaning?>" method="post">
 <table class="d-flex justify-content-center">
     <tr class="text-center bg-warning">
         <td style="width:200px;">Voc</td>

@@ -21,7 +21,7 @@ include_once('header.php');
     ?>
     
 <body>
-<div class="d-flex justify-content-center mt-5 mb-2"><a href="main.php"><div class="text-3d" >FunVocabs</div></a></div>
+<div class="d-flex justify-content-center mt-5 mb-2"><a href="index.php"><div class="text-3d" >FunVocabs</div></a></div>
 
 <div class="container col-12 ">
 
@@ -39,9 +39,9 @@ include_once('header.php');
             <select name="type"> 
 <!-- 不知道怎麼讓傳值回來的 info['type'] -->
 
-                <option value="1"  <?php if ($info['type']==1){echo "selected";}?>>vocab</option>
-                <option value="2"  <?php if ($info['type']==2){echo "selected";}?>>phrase</option>
-                <option value="3"  <?php if ($info['type']==3){echo "selected";}?>>idiom</option>
+                <option value="vocab"  <?php if ($info['type']=="vocab"){echo "selected";}?>>vocab</option>
+                <option value="phrase"  <?php if ($info['type']=="phrase"){echo "selected";}?>>phrase</option>
+                <option value="idiom"  <?php if ($info['type']=="idiom"){echo "selected";}?>>idiom</option>
             </select>
         </div>
 

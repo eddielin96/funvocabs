@@ -20,7 +20,7 @@ include_once('header.php');
     ?>
     
 <body>
-<div class="d-flex justify-content-center mt-5 mb-2"><a href="main.php"><div class="text-3d" >FunVocabs</div></a></div>
+<div class="d-flex justify-content-center mt-5 mb-2"><a href="index.php"><div class="text-3d" >FunVocabs</div></a></div>
 
 <div class="container col-12 ">
 
@@ -37,9 +37,9 @@ include_once('header.php');
         <div class="my-3 my-md-auto font-weight-bold">Vocab：<input disabled type="text" name="vocab" placeholder="edit your vocab" value="<?=$info['voc'];?>"></div>
         <div class="my-3 my-md-auto font-weight-bold">Type：
             <select name="type"  disabled> 
-                <option value="1"  <?php if ($info['type']==1){echo "selected";}?>>vocab</option>
-                <option value="2"  <?php if ($info['type']==2){echo "selected";}?>>phrase</option>
-                <option value="3"  <?php if ($info['type']==3){echo "selected";}?>>idiom</option>
+                <option value="vocab"  <?php if ($info['type']=="vocab"){echo "selected";}?>>vocab</option>
+                <option value="phrase"  <?php if ($info['type']=="phrase"){echo "selected";}?>>phrase</option>
+                <option value="idiom"  <?php if ($info['type']=="idiom"){echo "selected";}?>>idiom</option>
             </select>
         </div>
 
@@ -53,7 +53,7 @@ include_once('header.php');
 
     <div class=" d-flex col-12 mt-md-3 justify-content-center">
         <button class="mx-2 bg-danger" style="width:100px" type="submit" ><a href="api/delete_vocabs.php?id=<?=$id;?>">delete</a></button>
-        <button class="mx-2 bg-warning" style="width:100px" type="submit" ><a href="main.php">cancel</a></button>
+        <button class="mx-2 bg-warning" style="width:100px" type="submit" ><a href="index.php">cancel</a></button>
     </div>
     <div class="text-center text-danger col-12">Warning: you will delelte this word once you click the "delete" button</div>
 </div>
